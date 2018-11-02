@@ -1,0 +1,7 @@
+---
+title: "Innkalling av Styringsgruppen for MAR"
+author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
+date: "12\\. november 2018"
+output: html_document
+---
+

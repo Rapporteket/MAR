@@ -1,0 +1,66 @@
+---
+title: "Saksunderlag, styringsgruppen for MAR"
+author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
+date: "12\\. november 2018"
+output: html_document
+---
+
+# Sak 1: Godkjenning av innkalling og saksliste
+
+## FORSLAG TIL VEDTAK
+1. Styringsgruppen godkjenner innkalling og saksliste (med følgende kommentarer:)
+2. Følgende saker ønskes behandlet under sak 6: Eventuelt: ingen
+
+# Sak 2: Orientering om bakgrunn og innretning til prosjektet
+
+## Styringsdokument
+
+## Prosjektplan
+
+## Faser og hovedleveranser
+
+## Ansvarsfordeling og plan
+
+## Budsjett
+
+## Risikovurdering
+
+## Styringsgruppen
+
+## Referansegruppe
+
+## FORSLAG TIL VEDTAK
+1. Styringsgruppen tar gjeldende plan og styringsdokument til orientering
+
+
+# Sak 3: Status for prosjektet
+
+## FORSLAG TIL VEDTAK
+1. Styringsgruppen tar status til orientering
+
+
+# Sak 4: Spørsmål og innspill fra styringsgruppen
+
+## Mulige vurderingspunkter
+- Nødvendige endringer i styringsdokumentet
+- Nødvendige endringer i prosjektplanen
+- Gjeldende status og forventninger til fremdrift
+- Risiko som krever spesiell oppmerksomhet
+- Referansegruppen: sammensetning og forventet funksjon
+
+## VEDTAK
+_Utformes basert på diskusjon i styringsgruppen_
+
+
+# Sak 5: Styrets arbeidsform, informasjonsflyt og møteplan
+
+## Mulige vurderingspunkter
+- Arbeidsfordeling/roller i styringsgruppen
+- Plan for møter i styringsgruppen
+- Ønsket nivå og frekvens av informasjon om status for prosjektet utenom møter
+
+## VEDTAK
+_Utformes basert på diskusjon i styringsgruppen_
+
+
+# Sak 6: Eventuelt
