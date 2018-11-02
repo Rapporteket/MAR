@@ -9,13 +9,15 @@ output: html_document
 
 ## FORSLAG TIL VEDTAK
 1. Styringsgruppen godkjenner innkalling og saksliste (med følgende kommentarer:)
-2. Følgende saker ønskes behandlet under sak 6: Eventuelt: ingen
+2. Følgende saker ønskes behandlet under sak 6 (Eventuelt): ingen
 
 # Sak 2: Orientering om bakgrunn og innretning til prosjektet
 
-## Styringsdokument
+## Prosjektbegrunnelse
+Gjeldende prosjektbegrunnelse er vedlagt [her](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127313-021118-1414.pdf)
 
 ## Prosjektplan
+Gjeldende prosjektplan er vedlagt [her](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127284-021118-1416.pdf). Sentrale punkter fra planen er gjengitt under:
 
 ## Faser og hovedleveranser
 
@@ -30,7 +32,7 @@ output: html_document
 ## Referansegruppe
 
 ## FORSLAG TIL VEDTAK
-1. Styringsgruppen tar gjeldende plan og styringsdokument til orientering
+1. Styringsgruppen tar gjeldende plan og prosjektbegrunnelse til orientering
 
 
 # Sak 3: Status for prosjektet
@@ -42,7 +44,7 @@ output: html_document
 # Sak 4: Spørsmål og innspill fra styringsgruppen
 
 ## Mulige vurderingspunkter
-- Nødvendige endringer i styringsdokumentet
+- Uklarheter i prosjektbegrunnelsen
 - Nødvendige endringer i prosjektplanen
 - Gjeldende status og forventninger til fremdrift
 - Risiko som krever spesiell oppmerksomhet
