@@ -2,8 +2,11 @@
 title: "Saksunderlag, styringsgruppen for MAR"
 author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
 date: "12\\. november 2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
+
 
 # Sak 1: Godkjenning av innkalling og saksliste
 
@@ -14,31 +17,126 @@ output: html_document
 # Sak 2: Orientering om bakgrunn og innretning til prosjektet
 
 ## Prosjektbegrunnelse
-Gjeldende prosjektbegrunnelse er vedlagt [her](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127313-021118-1414.pdf)
+Prosjektbegrunnelse i sin helhet kan
+[lastes ned fra GitHub](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127313-021118-1414.pdf)[^1].
+
+[^1]: https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127313-021118-1414.pdf
 
 ## Prosjektplan
-Gjeldende prosjektplan er vedlagt [her](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127284-021118-1416.pdf). Sentrale punkter fra planen er gjengitt under:
+Prosjektplanen kan i sin helhet [lastes ned fra GitHub](https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127284-021118-1416.pdf)[^2]. Sentrale punkter fra planen er gjengitt under:
+
+[^2]: https://github.com/Rapporteket/MAR/raw/master/inst/MAR-348127284-021118-1416.pdf
 
 ## Faser og hovedleveranser
+1. Beslutning om oppstart av prosjektet
+1. Vurdering og utprøving av Shiny Server
+1. Installasjon av Shiny Server i testmiljø på Rapporteket
+1. Konvertering av eksisterende rapporter fra Jasper til Shiny Server
+1. Produksjonssetting av Shiny Server
 
-## Ansvarsfordeling og plan
+## Ansvarsfordeling og plan 1/2
+|Id|Milepæl|Frist|Ansvar|
+|:---|:------------------------------------------------|---|--------:|
+|M01|Prosjektoppstart|Mar|Prosjekteier|
+|M02|Finansiering avklart|Mar|Prosjekteier|
+|M11|Arkitektur for Rapporteket med Shiny er beskrevet og "godkjent"|Apr|HNIKT|
+|M12|Beslutte fremtidig kjøp av (lisens på) Shiny Server fra RStudio|Mai|HNIKT|
+|M21|Shiny Server fungerer som en samvirkende teknisk komponent på Rapporteket TEST|Mai|	HNIKT|
+|M22|Teknisk drift av Shiny Server på Rapporteket er tilstrekkelig godt dokumentert|Jun|HNIKT|
+|M23|Et enkelt men funksjonelt grafisk brukergrensesnitt er etablert for registrenes bruk av Shiny Server som resultattjeneste|Jun|SKDE|
+
+## Ansvarsfordeling og plan 2/2
+|Id|Milepæl|Frist|Ansvar|
+|:---|:------------------------------------------------|---|--------:|
+|M31|Shiny er etablert som metodikk hos statistikere i Servicemiljøet (nord)|Jun|SKDE|
+|M32|3 registre er migrert fra Jasper Server til Shiny Server i TEST|Aug|SKDE|
+|M33|Pilot på syntetiske data fra ett register er tilgjengelig gjennom "ekstern" Shiny Server|Sep|SKDE|
+|M41|Shiny Server er satt i produksjon på Rapporteket|Nov|HNIKT|
+|M42|Alle registre og rapporter er konvertert fra Jasper Server til Shiny Server|Nov|SKDE|
+|M43|Jasper Server er ikke lengre en nødvendig komponent på Rapporteket|Nov|HNIKT|
 
 ## Budsjett
+|Aktivitet|Periode|Timer|Timepris|Kostnad|Egen|Ekstern|
+|:------------------------|-------:|----:|--------:|-------:|-------:|-------:|
+|Utvikling HNIKT|Q1-2 18|144|895|128 880|0|128 880|
+|Webdrift HNIKT|Q1-3 18|251|700|175 700|0|175 700|
+|Utvikling NSMK|Q1-4 18|1053|470|494 910|494 910|0|
+||||||||
+|Programvarelisenser under utv.|Q2-4 18|||150 000|0|150 000|
+|Risikoreduserende tiltak|2019|||300 000|300 000|0|
+||||||||
+|Sum||1448||1 249 490|794 910|454 580|
 
-## Risikovurdering
+## Risikovurdering (utvalg)
+|Id|Sårbarhet|Ssh|Kons|__Risk__|Mulige tiltak|
+|--:|:-------------------------------|:-:|:--:|:--:|:---------------------------|
+|2|Statistikere har ikke kapasitet til migrering av rapporter|2|3|__6__|Øke kapasitet eller endre prioritering. Forlenge lisens for Jasper Server|
+|3|Statistikere har ikke kapasitet til migrering av R-rapporter|2|3|__6__|Øke kapasitet eller endre prioritering|
+|6|Statistikere er ikke i stand til å håndtere datafiltrering ut fra brukerhåndtering i Shiny|1|3|__3__|Øke R-kompetanse|
+|7|Statistikere har ikke kapasitet til å lære Shiny|1|3|__3__|Øke kapasitet eller endre prioritering|
+|9|Statistikere er ikke i stand til å håndtere "registernavigasjon" ut fra brukerhåndtering i Shiny|2|1|__2__|Øke R-kompetanse|
 
 ## Styringsgruppen
+|Navn|Representant for|
+|:---------------------------|:-------------|
+|Eva Stensland/Trym Mathisen|Helse Nord|
+|Rune Grimstad|Helse Midt|
+|Bernt Olav Økland|Helse Vest|
+|Sissel Jor|Helse Sør-Øst|
+|Ågot Ligaarden|Norsk Helsenett|
+|Jørn Hansen|FMK/NIKT HF|
 
 ## Referansegruppe
+Følgende personer er ønsket og forespurt av prosjektet:
+
+|Navn|Organisasjon|Rolle|
+|:--------------|:--------------|:-----------------|
+|Eirik Buanes|Helse Bergen HF/Intensivregisteret|Registerrepresentant|
+|Tormod Digre|St Olav|Hjerteinfarktregisteret/Resultatportalen (HMN)|
+|Mads Kristian Rohde|Nordlandssykehuset HF/NorSpis|Registerrepresentant|
+|Jan Nygård|OUS/Kreftregisteret|Registerrepresentant|
+|Yusman Kamaleri|Barnediabetes|Statistiker/Registerrepresentant|
+|Tore Morten Viland|OUS|Analytiker|
+|Lena B-M|HV|Statistiker|
+|Øyvind Hepsøe|Hemit|MRS|
+|Frode Heimdal|OUS|eReg|
 
 ## FORSLAG TIL VEDTAK
-1. Styringsgruppen tar gjeldende plan og prosjektbegrunnelse til orientering
+1. Styringsgruppen tar gjeldende plan og prosjektbegrunnelse til orientering (endringer behandles i sak 4)
 
 
 # Sak 3: Status for prosjektet
 
+## Status generelt
+- Fase 3 (etablering av Shiny Server i testmiljø på Rapporteket) går mot slutten, henger igjen på autentisering/autorisasjon (FALK)
+- Mye aktivitet i fase 4 (konvertering av eksisterende resultattjenester)
+- Fase 5 (produksjonssetting av Shiny Server) er ikke påbegynt
+- Ukentlige prosjektmøter
+- Stor aktivitet i prosjektet både hos HNIKT og SKDE
+
+## Utførte oppgaver
+- Utprøving og anskaffelse av Shiny Server
+- Installasjon og konfigurasjon av Shiny Server på Rapporteket
+- Etablering av R-pakker for administrasjon og forvaltning av registre på Shiny Server
+- Sammenkobling av Shiny Server mot eksisterende infrastruktur for flyt av data
+- Intern opplæring i bruk av Shiny for R
+
+
+## Gjeldende utfordringer
+- Sammenkobling og bruk av FALK for autentisering og autorisasjon
+- Simulering av brukere i fravær av løsning for autentisering/autorisasjon
+- Registrene kan derfor heller ikke teste egne resultattjenester på skarpe data
+- Komme igang med kunnskapsoverføring til "eksterne" og dermed "bredding" av arbeidet for konvertering av eksisterende resultattjenester til Shiny Server
+- Liten eller ingen kapasitet til å oppgradere eksisterende eller etablere nye resultattjenester for kvalitetsregistrene
+
+## Risikohåndtering
+- Lisens for Jasper Server vil mest sannsynlig bli forlenget (Id 2)
+- Må snart begynne involvering av statistikere utenfor SKDE (Id 3)
+- Simulerte brukere og organisasjonstilhørighet benyttes for å teste filtrering av data (Id 6 og 9)
+- Kalenderblokkering/prioritering er iverksatt for sikre "timeleveranser" til prosjektet (Id 7)
+
 ## FORSLAG TIL VEDTAK
-1. Styringsgruppen tar status til orientering
+1. Styringsgruppen tar status til orientering (endringer behandles i sak 4)
 
 
 # Sak 4: Spørsmål og innspill fra styringsgruppen
