@@ -3,16 +3,18 @@ title: "Saksunderlag, styringsgruppen for MAR"
 author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
 date: "12\\. november 2018"
 output:
+  #beamer_presentation: default
   pdf_document: default
   html_document: default
 ---
-
 
 # Sak 1: Godkjenning av innkalling og saksliste
 
 ## FORSLAG TIL VEDTAK
 1. Styringsgruppen godkjenner innkalling og saksliste (med følgende kommentarer:)
 2. Følgende saker ønskes behandlet under sak 6 (Eventuelt): ingen
+
+\newpage
 
 # Sak 2: Orientering om bakgrunn og innretning til prosjektet
 
@@ -76,6 +78,8 @@ Prosjektplanen kan i sin helhet [lastes ned fra GitHub](https://github.com/Rappo
 |7|Statistikere har ikke kapasitet til å lære Shiny|1|3|__3__|Øke kapasitet eller endre prioritering|
 |9|Statistikere er ikke i stand til å håndtere "registernavigasjon" ut fra brukerhåndtering i Shiny|2|1|__2__|Øke R-kompetanse|
 
+\newpage
+
 ## Styringsgruppen
 |Navn|Representant for|
 |:---------------------------|:-------------|
@@ -104,6 +108,7 @@ Følgende personer er ønsket og forespurt av prosjektet:
 ## FORSLAG TIL VEDTAK
 1. Styringsgruppen tar gjeldende plan og prosjektbegrunnelse til orientering (endringer behandles i sak 4)
 
+\newpage
 
 # Sak 3: Status for prosjektet
 
@@ -138,6 +143,7 @@ Følgende personer er ønsket og forespurt av prosjektet:
 ## FORSLAG TIL VEDTAK
 1. Styringsgruppen tar status til orientering (endringer behandles i sak 4)
 
+\newpage
 
 # Sak 4: Spørsmål og innspill fra styringsgruppen
 
@@ -151,6 +157,7 @@ Følgende personer er ønsket og forespurt av prosjektet:
 ## VEDTAK
 _Utformes basert på diskusjon i styringsgruppen_
 
+\newpage
 
 # Sak 5: Styrets arbeidsform, informasjonsflyt og møteplan
 
@@ -162,5 +169,6 @@ _Utformes basert på diskusjon i styringsgruppen_
 ## VEDTAK
 _Utformes basert på diskusjon i styringsgruppen_
 
+\newpage
 
 # Sak 6: Eventuelt

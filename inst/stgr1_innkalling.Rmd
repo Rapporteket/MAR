@@ -2,12 +2,14 @@
 title: "Innkalling av Styringsgruppen for MAR"
 author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
 date: "12\\. november 2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 # Møtet
 |Egensakp|Verdi|
-|:---|:---|
+|:--------------------------------|:------------------------------------------------|
 |Tid |Mandag 12. november 2018 kl 1200 -- 14:00|
 |Sted|UNN Breivika Tromsø, C0.513 (møterom SKDE)|
 |Telefon|77 60 21 00, konferanse ID 997515|
@@ -19,7 +21,7 @@ output: html_document
 
 ## Styringsgruppen
 |Navn|Representant for / rolle|
-|:---|:---|
+|:--------------|:----------------------------------|
 |Eva Stensland/Trym Mathisen|Helse Nord/prosjekteier|
 |Rune Grimstad|Helse Midt|
 |Bernt Olav Økland|Helse Vest|
@@ -29,14 +31,16 @@ output: html_document
 
 ## Øvrige
 |Navn|Rolle|
-|:---|:---|
+|:-------------|:-------------------|
 |Saana Heinänen|Prosjektleder HN-IKT|
 |Are Edvardsen|Prosjektleder SKDE|
 |Øvrige|Prosjektgruppen|
 
+\newpage
+
 # Program
 |Sak|Tid|Tema|Ansvarlig|
-|---:|---:|:---|:---|
+|-:|-----:|:---------------------------------------------------|:------------|
 |1|12:00|Godkjenning av innkalling og saksliste|PL|
 |2|12:05|Orientering om bakgrunn og innretning til prosjektet|PL|
 |3|12:15|Orientering om status for prosjektet|PL|
