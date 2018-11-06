@@ -1,9 +1,11 @@
 ---
-title: "Innkalling av Styringsgruppen for MAR"
+title: "Innkalling, første møte i styringsgruppen for prosjektet *Modernisering av Rapporteket* (MAR)"
 author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
-date: "12\\. november 2018"
+date: "Mandag 12\\. november 2018"
 output:
-  pdf_document: default
+  #beamer_presentation: default
+  #word_document: default
+  #pdf_document: default
   html_document: default
 ---
 
