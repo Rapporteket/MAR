@@ -5,8 +5,8 @@ date: "Mandag 12\\. november 2018"
 output:
   #beamer_presentation: default
   #word_document: default
-  #pdf_document: default
-  html_document: default
+  pdf_document: default
+  #html_document: default
 ---
 
 # Møtet
