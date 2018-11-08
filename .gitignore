@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 *.html
+*.md
+*.doc
+*.docx
