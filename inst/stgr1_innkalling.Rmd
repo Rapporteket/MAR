@@ -42,10 +42,10 @@ output:
 
 # Program
 |Sak|Tid|Tema|Ansvarlig|
-|-:|-----:|:---------------------------------------------------|:------------|
-|1|12:00|Godkjenning av innkalling og saksliste|PL|
-|2|12:05|Orientering om bakgrunn og innretning til prosjektet|PL|
-|3|12:15|Orientering om status for prosjektet|PL|
-|4|12:45|Spørsmål og innspill|Styringsgruppen|
-|5|13:15|Styrets arbeidsform, informasjonsflyt og møteplan|Styringsgruppen|
-|6|13:45|Ev|Styringsgruppen/PL|
+|---:|-----:|:---------------------------------------------------|:------------|
+|1|1200|Godkjenning av innkalling og saksliste|PL|
+|2|1205|Orientering om bakgrunn og innretning til prosjektet|PL|
+|3|1215|Orientering om status for prosjektet|PL|
+|4|1245|Spørsmål og innspill|Styringsgruppen|
+|5|1315|Styrets arbeidsform, informasjonsflyt og møteplan|Styringsgruppen|
+|6|1345|Ev|Styringsgruppen/PL|
