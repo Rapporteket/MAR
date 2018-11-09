@@ -61,9 +61,15 @@ shinyServer(function(input, output, session) {
             PDF = 'pdf', HTML = 'html', REVEAL = 'html', BEAMER = 'pdf')
     )
   }
+  
+  observe(
+    print(input$tab)
+  )
 
   # render file function for re-use
   contentFile <- function(file, srcFile, tmpFile, type) {
+    srcFile <- paste0(srcFile, ".Rmd")
+    print(tmpFile)
     src <- normalizePath(system.file(srcFile, package="MAR"))
 
     # temporarily switch to the temp dir, in case we do not have write
@@ -92,18 +98,21 @@ shinyServer(function(input, output, session) {
     file.rename(out, file)
   }
   
-  output$downloadReportStentbruk <- downloadHandler(
+  output$downloadDoc <- downloadHandler(
     filename = function() {
       downloadFilename(fileBaseName=switch(
         input$tab,
         inn = "strg1_innkalling",
         sak = "strg1_saker"
-      ), input$formatStentbruk)
+      ), input$docFormat)
     },
 
     content = function(file) {
-      contentFile(file, "NORIC_local_monthly_stent.Rmd", "tmpNoricStent.Rmd",
-                  input$formatStentbruk)
+      contentFile(file, srcFile = switch(
+        input$tab,
+        inn = "stgr1_innkalling",
+        sak = "stgr1_saker"
+        ), tmpFile = "tmpMar.Rmd", type = input$docFormat)
     }
   )
   # 
