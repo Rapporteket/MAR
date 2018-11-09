@@ -2,12 +2,46 @@
 title: "Innkalling, første møte i styringsgruppen for prosjektet *Modernisering av Rapporteket* (MAR)"
 author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
 date: "Mandag 12\\. november 2018"
-output:
-  #beamer_presentation: default
-  #word_document: default
-  pdf_document: default
+params:
+  tableFormat: "html"
+# output:
+#   #beamer_presentation: default
+#   #word_document: default
+#   pdf_document: default
   #html_document: default
 ---
+
+```{r settings, echo=FALSE, include=FALSE}
+library(magrittr)
+library(knitr)
+library(kableExtra)
+options(knitr.table.format = params$tableFormat)
+knitr::opts_chunk$set(warnings=FALSE,echo=FALSE)
+options(stringsAsFactors=FALSE)
+Sys.setlocale("LC_TIME", "nb_NO.UTF-8")
+```
+
+```{r makeStandardTableFunction, eval=TRUE}
+mst <- function(tab, type = params$tableFormat, cap = "", digs = 0, align = NULL, fs = 8, lsd = FALSE) {
+  if (type == "latex") {
+    if (lsd) {
+      lo <- c("hold_position", "scale_down")
+    } else {
+      lo <- c("hold_position")
+    }
+    k <- kable(tab, caption = cap, digits = digs, align = align,
+               booktabs = TRUE) %>% 
+      kable_styling(latex_options = lo, font_size = fs)
+  }
+  
+  if (type == "html") {
+    k <- kable(tab, caption = cap, digits = digs, align = align) %>% 
+      kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                    full_width = F)
+  }
+  print(k)
+}
+```
 
 # Møtet
 |Egensakp|Verdi|
@@ -41,6 +75,21 @@ output:
 \newpage
 
 # Program
+```{r program, echo=FALSE, results='asis'}
+Sak <- as.character(seq(1,6))
+Tid <- c("12:00", "12:05", "12:15", "12:45", "13:15", "13:45")
+Tema <- c("Godkjenning av innkalling og saksliste",
+          "Orientering om bakgrunn og innretning til prosjektet",
+          "Orientering om status for prosjektet",
+          "Spørsmål og innspill",
+          "Styrets arbeidsform, informasjonsflyt og møteplan",
+          "Eventuelt")
+Ansvarlig <- c("PL", "PL", "PL", "Styringsgruppen", "Styringsgruppen",
+               "Styringsgruppen/PL")
+
+tab <- data.frame(Sak, Tid, Tema, Ansvarlig)
+mst(tab)
+```
 |Sak|Tid|Tema|Ansvarlig|
 |---:|-----:|:---------------------------------------------------|:------------|
 |1|1200|Godkjenning av innkalling og saksliste|PL|
