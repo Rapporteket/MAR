@@ -27,11 +27,11 @@ shinyUI(
           width = 2
         ),
         mainPanel(
-          tabsetPanel(
+          tabsetPanel(id   = "tab",
             tabPanel("Innkalling",
-                     htmlOutput("stgr1_innkalling")),
+                     htmlOutput("stgr1_innkalling"), value = "inn"),
             tabPanel("Saker",
-                     htmlOutput("stgr1_saker")),
+                     htmlOutput("stgr1_saker"), value = "sak"),
             tabPanel("Referat")
             )
           )

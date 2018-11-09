@@ -64,7 +64,7 @@ shinyServer(function(input, output, session) {
 
   # render file function for re-use
   contentFile <- function(file, srcFile, tmpFile, type) {
-    src <- normalizePath(system.file(srcFile, package="noric"))
+    src <- normalizePath(system.file(srcFile, package="MAR"))
 
     # temporarily switch to the temp dir, in case we do not have write
     # permission to the current working directory
@@ -92,18 +92,20 @@ shinyServer(function(input, output, session) {
     file.rename(out, file)
   }
   
-  
-  # output$downloadReportStentbruk <- downloadHandler(
-  #   filename = function() {
-  #     downloadFilename("NORIC_local_monthly_stent",
-  #                      input$formatStentbruk)
-  #   },
-  #   
-  #   content = function(file) {
-  #     contentFile(file, "NORIC_local_monthly_stent.Rmd", "tmpNoricStent.Rmd",
-  #                 input$formatStentbruk)
-  #   }
-  # )
+  output$downloadReportStentbruk <- downloadHandler(
+    filename = function() {
+      downloadFilename(fileBaseName=switch(
+        input$tab,
+        inn = "strg1_innkalling",
+        sak = "strg1_saker"
+      ), input$formatStentbruk)
+    },
+
+    content = function(file) {
+      contentFile(file, "NORIC_local_monthly_stent.Rmd", "tmpNoricStent.Rmd",
+                  input$formatStentbruk)
+    }
+  )
   # 
   # output$downloadReportProsedyrer <- downloadHandler(
   #   filename = function() {
