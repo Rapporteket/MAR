@@ -10,16 +10,22 @@
 library(shiny)
 
 myTitle <- HTML(paste0(icon("file-medical-alt"),
-                       " Styringsgruppe, Modernisering av Rapporteket"))
+                       " STYRINGSGRUPPE Modernisering av Rapporteket"))
 shinyUI(
   navbarPage(
     title = myTitle,
-    #theme = "bootstrap.css",
+    theme = "bootstrap.css",
     tabPanel(
       "12. november 2018",
       sidebarLayout(
-        sidebarPanel(),
-          #uiOutput("sampleUcControl")),
+        sidebarPanel(
+          radioButtons('docFormat',
+                       'Last ned som:',
+                       c('PDF', 'HTML', 'BEAMER', 'REVEAL', 'Word'),
+                       inline = FALSE),
+          downloadButton('downloadDoc', 'Ok'),
+          width = 2
+        ),
         mainPanel(
           tabsetPanel(
             tabPanel("Innkalling",
