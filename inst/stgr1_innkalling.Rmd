@@ -44,7 +44,7 @@ mst <- function(tab, type = params$tableFormat, cap = "", digs = 0, align = NULL
 ```
 
 # Møtet
-|Egensakp|Verdi|
+|Egenskap|Verdi|
 |:--------------------------------|:------------------------------------------------|
 |Tid |Mandag 12. november 2018 kl 1200 -- 14:00|
 |Sted|UNN Breivika Tromsø, C0.513 (møterom SKDE)|
