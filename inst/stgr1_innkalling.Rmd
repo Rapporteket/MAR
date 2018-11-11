@@ -4,6 +4,10 @@ author: "Are Edvardsen, SKDE; Saana Heinänen, HN-IKT"
 date: "Mandag 12\\. november 2018"
 params:
   tableFormat: "html"
+header-includes:
+  - \usepackage[english, norsk]{babel}
+  - \usepackage{booktabs}
+  - \usepackage{rotating}
 # output:
 #   #beamer_presentation: default
 #   #word_document: default
@@ -22,7 +26,7 @@ Sys.setlocale("LC_TIME", "nb_NO.UTF-8")
 ```
 
 ```{r makeStandardTableFunction, eval=TRUE}
-mst <- function(tab, type = params$tableFormat, cap = "", digs = 0, align = NULL, fs = 8, lsd = FALSE) {
+mst <- function(tab, type = params$tableFormat, cap = NULL, digs = 0, align = NULL, fs = 8, lsd = FALSE) {
   if (type == "latex") {
     if (lsd) {
       lo <- c("hold_position", "scale_down")
@@ -43,38 +47,50 @@ mst <- function(tab, type = params$tableFormat, cap = "", digs = 0, align = NULL
 }
 ```
 
-# Møtet
-|Egenskap|Verdi|
-|:--------------------------------|:------------------------------------------------|
-|Tid |Mandag 12. november 2018 kl 1200 -- 14:00|
-|Sted|UNN Breivika Tromsø, C0.513 (møterom SKDE)|
-|Telefon|77 60 21 00, konferanse ID 997515|
-|Videokonferanse over helsenettet|997515|
-|Skype|997515@uc.nhn.no eller tos.felles.c0-513@uc.nhn.no|
-|Video utenfor helsenettet|Gå til siden https://join.nhn.no/ (installere klient), velg Delta i samtale (Join call), tast inn Samtale ID (Call ID) 997515 (Kode ikke nødvendig) og tast inn navnet ditt. Krever Chrome.|
+## Møtet
+```{r motet, echo=FALSE, results='asis'}
+Egenskap <- c("Tid", "Sted", "Telefon", "Videokonferanse over helsenettet",
+              "Skype", "Video utenfor helsenettet")
+Verdi <- c("Mandag 12. november 2018 kl 1200 -- 14:00",
+           "UNN Breivika Tromsø, C0.513 (møterom SKDE)",
+           "77 60 21 00, konferanse ID 997515",
+           "997515",
+           "997515@uc.nhn.no eller tos.felles.c0-513@uc.nhn.no",
+           "Gå til siden https://join.nhn.no/ (installere klient), velg Delta i samtale (Join call), tast inn Samtale ID (Call ID) 997515 (Kode ikke nødvendig) og tast inn navnet ditt. Krever Chrome")
+tab <- data.frame(Egenskap, Verdi)
+if (params$tableFormat == "latex") {
+  align <- c("l", "p{6cm}")
+} else {
+  align <- c("l", "l")
+}
+mst(tab, align = align)
+```
 
 # Deltagere
 
 ## Styringsgruppen
-|Navn|Representant for / rolle|
-|:--------------|:----------------------------------|
-|Eva Stensland/Trym Mathisen|Helse Nord/prosjekteier|
-|Rune Grimstad|Helse Midt|
-|Bernt Olav Økland|Helse Vest|
-|Sissel Jor|Helse Sør-Øst|
-|Ågot Ligaarden|Norsk Helsenett|
-|Jørn Hansen|FMK, NIKT HF|
+```{r styringsgruppen, echo=FALSE, results='asis'}
+Navn <- c("Eva Stensland", "Trym Mathisen", "Rune Grimstad",
+          "Bernt Olav Økland", "Sissel Jor", "Ågot Ligaarden", "Jørn Hansen")
+Rolle <- c("Helse Nord/prosjekteier", "Helse Nord/prosjekteier", "Helse Midt",
+           "Helse Vest", "Helse Sør-Øst", "Norsk Helsenett", "FMK, NIKT HF")
+tab <- data.frame(Navn, Rolle)
+mst(tab)
+```
+
 
 ## Øvrige
-|Navn|Rolle|
-|:-------------|:-------------------|
-|Saana Heinänen|Prosjektleder HN-IKT|
-|Are Edvardsen|Prosjektleder SKDE|
-|Øvrige|Prosjektgruppen|
+```{r ovrige, echo=FALSE, results='asis'}
+Navn <- c("Saana Heinänen", "Are Edvardsen", "Øvrige")
+Rolle <- c("Prosjektleder HN-IKT", "Prosjektleder SKDE", "Prosjektgruppen")
+tab <- data.frame(Navn, Rolle)
+mst(tab)
+```
 
-\newpage
 
 # Program
+
+## Tidsskjema
 ```{r program, echo=FALSE, results='asis'}
 Sak <- as.character(seq(1,6))
 Tid <- c("12:00", "12:05", "12:15", "12:45", "13:15", "13:45")
@@ -88,13 +104,5 @@ Ansvarlig <- c("PL", "PL", "PL", "Styringsgruppen", "Styringsgruppen",
                "Styringsgruppen/PL")
 
 tab <- data.frame(Sak, Tid, Tema, Ansvarlig)
-mst(tab)
+mst(tab, lsd = TRUE)
 ```
-|Sak|Tid|Tema|Ansvarlig|
-|---:|-----:|:---------------------------------------------------|:------------|
-|1|1200|Godkjenning av innkalling og saksliste|PL|
-|2|1205|Orientering om bakgrunn og innretning til prosjektet|PL|
-|3|1215|Orientering om status for prosjektet|PL|
-|4|1245|Spørsmål og innspill|Styringsgruppen|
-|5|1315|Styrets arbeidsform, informasjonsflyt og møteplan|Styringsgruppen|
-|6|1345|Ev|Styringsgruppen/PL|
