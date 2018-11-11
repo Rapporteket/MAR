@@ -58,13 +58,14 @@ shinyServer(function(input, output, session) {
                  as.character(as.integer(as.POSIXct(Sys.time())))),
           sep = '.', switch(
             type,
-            PDF = 'pdf', HTML = 'html', REVEAL = 'html', BEAMER = 'pdf')
+            PDF = 'pdf', HTML = 'html', REVEAL = 'html', BEAMER = 'pdf',
+            Word = 'docx')
     )
   }
   
-  observe(
-    print(input$tab)
-  )
+  # observe(
+  #   print(input$tab)
+  # )
 
   # render file function for re-use
   contentFile <- function(file, srcFile, tmpFile, type) {
@@ -83,15 +84,16 @@ shinyServer(function(input, output, session) {
       type,
       PDF = pdf_document(),
       HTML = html_document(),
-      BEAMER = beamer_presentation(theme = "Hannover"),
-      REVEAL = revealjs::revealjs_presentation(theme = "sky")
-      #css = normalizePath(system.file("bootstrap.css", package = "noric")))
+      BEAMER = beamer_presentation(theme = "", slide_level = 2),
+      REVEAL = revealjs::revealjs_presentation(theme = "sky"),
+      Word = word_document()
     ), params = list(tableFormat=switch(
       type,
       PDF = "latex",
       HTML = "html",
       BEAMER = "latex",
-      REVEAL = "html")
+      REVEAL = "html",
+      Word = "html")
     ), output_dir = tempdir())
     # active garbage collection to prevent memory hogging?
     gc()
@@ -115,15 +117,4 @@ shinyServer(function(input, output, session) {
         ), tmpFile = "tmpMar.Rmd", type = input$docFormat)
     }
   )
-  # 
-  # output$downloadReportProsedyrer <- downloadHandler(
-  #   filename = function() {
-  #     downloadFilename("NORIC_local_monthly", input$formatProsedyrer)
-  #   },
-  #   
-  #   content = function(file) {
-  #     contentFile(file, "NORIC_local_monthly.Rmd", "tmpNoric.Rmd",
-  #                 input$formatProsedyrer)
-  #   }
-  # )
 })
