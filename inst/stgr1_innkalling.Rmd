@@ -100,7 +100,7 @@ Tema <- c("Godkjenning av innkalling og saksliste",
           "Spørsmål og innspill",
           "Styrets arbeidsform, informasjonsflyt og møteplan",
           "Eventuelt")
-Ansvarlig <- c("PL", "PL", "PL", "Styringsgruppen", "Styringsgruppen",
+Ansvarlig <- c("Styringsgruppens leder", "PL", "PL", "Styringsgruppen", "Styringsgruppen",
                "Styringsgruppen/PL")
 
 tab <- data.frame(Sak, Tid, Tema, Ansvarlig)

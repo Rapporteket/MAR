@@ -61,6 +61,7 @@ mst <- function(tab, type = params$tableFormat, cap = NULL, digs = 0, align = NU
 # Sak 2: Orientering om bakgrunn og innretning til prosjektet
 
 ## Prosjektbegrunnelse
+- Hva er Rapporteket?
 - Rapporteket konseptuelt uendret siden etablering 2011
 - Forenkling av drift aktualisert etter krav om flytting
 - Tydeligere skille mellom drift og innholdsproduksjon
