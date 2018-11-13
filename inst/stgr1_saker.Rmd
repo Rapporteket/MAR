@@ -153,7 +153,7 @@ Tiltak <- c("Øke kapasitet eller endre prioritering. Forlenge lisens for Jasper
             "Øke R-kompetanse")
 
 if (params$tableFormat == "latex") {
-  mst(tab = data.frame(Id, Tema, Ssh, Kons, Risk, Tiltak), align = "rp{5cm}rrrp{5cm}")
+  mst(tab = data.frame(Id, Tema, Ssh, Kons, Risk, Tiltak), align = "rp{3cm}rrrp{3cm}")
 } else {
   mst(tab = data.frame(Id, Tema, Ssh, Kons, Risk, Tiltak))
 }
@@ -163,7 +163,7 @@ if (params$tableFormat == "latex") {
 
 ## Styringsgruppen
 ```{r styringsgr, echo=FALSE, results='asis'}
-Navn <- c("Eva Stensland", "Trym Mathisen", "Rune Grimstad", "Bernt O. Økland",
+Navn <- c("Eva Stensland", "Trym Mathisen", "John P. Skjetne", "Bernt O. Økland",
           "Sissel Jor", "Ågot Ligaarden", "Jørn Å. Hansen")
 Representerer <- c("Nasjonalt servicemiljø/PE", "HN-IKT/PE", "Helse Midt",
                    "Helse Vest", "Helse Sør-Øst", "Norsk Helsenett",

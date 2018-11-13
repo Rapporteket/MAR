@@ -70,7 +70,7 @@ mst(tab, align = align)
 
 ## Styringsgruppen
 ```{r styringsgruppen, echo=FALSE, results='asis'}
-Navn <- c("Eva Stensland", "Trym Mathisen", "Rune Grimstad",
+Navn <- c("Eva Stensland", "Trym Mathisen", "John P. Skjetne",
           "Bernt Olav Økland", "Sissel Jor", "Ågot Ligaarden", "Jørn Hansen")
 Rolle <- c("Helse Nord/prosjekteier", "Helse Nord/prosjekteier", "Helse Midt",
            "Helse Vest", "Helse Sør-Øst", "Norsk Helsenett", "FMK, NIKT HF")
