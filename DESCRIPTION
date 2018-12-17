@@ -7,8 +7,7 @@ Authors@R: c(person("Edvardsen", "Are", email = "are.edvardsen@helse-
     nord.no", role = c("cre", "aut")), person("Thon", "Kevin", email =
     "kevin.thon@skde.no", role = "aut"))
 Maintainer: Are Edvardsen <are.edvardsen@helse-nord.no>
-Description: R-channel for communicating information regarding the project
-MAR. Mainly aimed at external stakeholders.
+Description: R-channel for communicating information regarding the project MAR. Mainly aimed at external stakeholders.
 License: GPL-2
 Depends:
     R (>= 3.4.4)
