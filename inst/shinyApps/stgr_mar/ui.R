@@ -43,9 +43,5 @@ shinyUI(
     ),
     tabPanel("12. februar 2019?"),
     tabPanel("12. april 2019?")
-    # tabPanel("Test",
-    #   #icon = icon("file-medical-alt")
-    #   icon = icon("tasks", lib = "glyphicon")
-    #)
   )
 )

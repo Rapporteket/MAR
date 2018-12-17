@@ -24,12 +24,7 @@ shinyServer(function(input, output, session) {
                                            'base64_images')) %>%
       shiny::HTML()
   }
-  
-  
-  # output$sampleUcControl <- renderUI({
-  #   selectInput(inputId = "sampleUc", label = "Sample user ctrl",
-  #               choices = c("How", "it", "will", "look"))
-  # })
+
   
   output$distPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
@@ -63,10 +58,6 @@ shinyServer(function(input, output, session) {
     )
   }
   
-  # observe(
-  #   print(input$tab)
-  # )
-
   # render file function for re-use
   contentFile <- function(file, srcFile, tmpFile, type) {
     srcFile <- paste0(srcFile, ".Rmd")
