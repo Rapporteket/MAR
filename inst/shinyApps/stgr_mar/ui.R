@@ -25,7 +25,7 @@ shinyUI(
         sidebarPanel(
           radioButtons('docFormat',
                        'Last ned som:',
-                       c('PDF', 'HTML', 'BEAMER', 'REVEAL', 'Word'),
+                       c('PDF', 'HTML', 'BEAMER', 'REVEAL'),
                        inline = FALSE),
           downloadButton('downloadDoc', 'Ok'),
           width = 2
