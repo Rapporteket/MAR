@@ -8,13 +8,17 @@
 #
 
 library(shiny)
+library(rapbase)
 
-myTitle <- HTML(paste0(icon("file-medical-alt"),
-                       " STYRINGSGRUPPE Modernisering av Rapporteket"))
+addResourcePath('rap', system.file('www', package='rapbase'))
+regTitle <- "STYRINGSGRUPPE Modernisering av Rapporteket"
+
 shinyUI(
   navbarPage(
-    title = myTitle,
-    theme = "bootstrap.css",
+    title = div(img(src="rap/logo.svg", alt="Rapporteket", height="26px"),
+                regTitle),
+    windowTitle = regTitle,
+    theme = "rap/bootstrap.css",
     tabPanel(
       "12. november 2018",
       sidebarLayout(
@@ -39,5 +43,9 @@ shinyUI(
     ),
     tabPanel("12. februar 2019?"),
     tabPanel("12. april 2019?")
+    # tabPanel("Test",
+    #   #icon = icon("file-medical-alt")
+    #   icon = icon("tasks", lib = "glyphicon")
+    #)
   )
 )
