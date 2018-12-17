@@ -9,6 +9,7 @@
 
 library(shiny)
 library(magrittr)
+library(kableExtra)
 library(MAR)
 
 # Define server logic required to draw a histogram

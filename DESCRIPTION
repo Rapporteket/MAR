@@ -12,6 +12,7 @@ License: GPL-2
 Depends:
     R (>= 3.4.4)
 Imports:
+    kableExtra,
     knitr,
     magrittr,
     markdown,
