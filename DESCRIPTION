@@ -1,9 +1,27 @@
 Package: MAR
 Type: Package
-Title: What the package does (short line)
+Title: Things (mainly shiny) related to project MAR
 Version: 1.0
 Date: 2018-11-02
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: c(person("Edvardsen", "Are", email = "are.edvardsen@helse-
+    nord.no", role = c("cre", "aut")), person("Thon", "Kevin", email =
+    "kevin.thon@skde.no", role = "aut"))
+Maintainer: Are Edvardsen <are.edvardsen@helse-nord.no>
+Description: R-channel for communicating information regarding the project
+MAR. Mainly aimed at external stakeholders.
+License: GPL-2
+Depends:
+    R (>= 3.4.4)
+Imports:
+    knitr,
+    magrittr,
+    markdown,
+    rapbase,
+    shiny,
+    yaml
+Remotes:
+    Rapporteket/rapbase@rel
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
+URL: http://github.com/Rapporteket/MAR
+BugReports: http://github.com/Rapporteket/MAR/issues
